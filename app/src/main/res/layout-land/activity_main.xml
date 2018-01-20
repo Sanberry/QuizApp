@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/RelativeLayout">
+    <TextView
+        style="@style/WelcomeForLand"
+        android:text="@string/welcome_to"
+        android:id="@+id/welcome"
+        />
+    <ImageView
+        style="@style/MainPageImageLand"
+        android:src="@drawable/fruit_or_veggie"
+        android:id="@+id/main_image"
+        android:layout_below="@id/welcome"
+        />
+    <TextView
+        android:id="@+id/info"
+        style="@style/InfoLand"
+        android:text="@string/info"
+        android:layout_below="@id/main_image"/>
+    <Button
+        style="@style/StartButton"
+        android:onClick="start"
+        android:text="@string/click_to_start"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"/>
+</RelativeLayout>

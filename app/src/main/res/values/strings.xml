@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">QuizApp</string>
+    <string name="welcome_to">Fruit or Veggie?</string>
+    <string name="info">Through this quiz your knowledge about fruits and vegetables will be tested!\n Good Luck!</string>
+    <string name="write_your_name">Tell us how we should call you</string>
+    <string name="click_to_start">Click to Start</string>
+    <string name="enter_name">Please scroll down to see rest of the test.\n You will be notified about your progress after each answer and at the end of the quiz.</string>
+    <string name="question1">Is potato a fruit or vegetable?</string>
+    <string name="question2">Is tomato a fruit or vegetable?</string>
+    <string name="question3">Check the ones below and click the ones that are fruits!</string>
+    <string name="question4">Write down the one that is not a vegetable; pumpkin, turnip, bean?</string>
+    <string name="submit">Submit</string>
+    <string name="score">Click and Scroll to View Your Overall Score</string>
+</resources>
