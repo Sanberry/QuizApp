@@ -1,4 +1,5 @@
 package com.example.android.quizapp;
+
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -7,10 +8,13 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import java.util.ArrayList;
 
 public class SecondActivity extends AppCompatActivity {
 
+
+    int score = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,7 +36,6 @@ public class SecondActivity extends AppCompatActivity {
         answers.add("broccoli");
         answers.add("bell pepper");
         answers.add("cabbage");
-
 
 
         RadioButton answerView1 = (RadioButton) findViewById(R.id.radioButton1);
@@ -60,7 +63,6 @@ public class SecondActivity extends AppCompatActivity {
         answerView8.setText(answers.get(7));
 
     }
-    int score = 0;
 
     public void onRadioButtonClicked(View view) {
         //Calling the name of the user to use within the toast message
@@ -99,6 +101,7 @@ public class SecondActivity extends AppCompatActivity {
         }
 
     }
+
     public void checkBoxClicked(View view) {
         EditText userName = (EditText) findViewById(R.id.user_name);
         String name = userName.getText().toString();
@@ -108,12 +111,12 @@ public class SecondActivity extends AppCompatActivity {
         CheckBox answerView6 = (CheckBox) findViewById(R.id.checkBoxButton2);
         CheckBox answerView8 = (CheckBox) findViewById(R.id.checkBoxButton4);
 
-        if(answerView5.isChecked() && answerView7.isChecked()
-                && !answerView6.isChecked() && !answerView8.isChecked()){
-            score = score+ 1;
+        if (answerView5.isChecked() && answerView7.isChecked()
+                && !answerView6.isChecked() && !answerView8.isChecked()) {
+            score = score + 1;
             Toast.makeText(this, name + ", you are correct!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
 
-        }  else {
+        } else {
             Toast.makeText(this, name + ", you are wrong!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
 
         }
@@ -122,14 +125,14 @@ public class SecondActivity extends AppCompatActivity {
     public void submitWrittenAnswer(View view) {
         EditText userName = (EditText) findViewById(R.id.user_name);
         String name = userName.getText().toString();
-        EditText editText= (EditText) findViewById(R.id.writtenAnswer);
+        EditText editText = (EditText) findViewById(R.id.writtenAnswer);
         String userEntry = editText.getText().toString();
 
 
-        if(userEntry.matches("pumpkin")) {
-            score = score +1;
+        if (userEntry.matches("pumpkin")) {
+            score = score + 1;
             Toast.makeText(this, name + ", you are correct!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
-        }else{
+        } else {
 
             Toast.makeText(this, name + ", you are wrong!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
 
@@ -150,11 +153,11 @@ public class SecondActivity extends AppCompatActivity {
             display(message);
 
         } else {
-            message +="\n Correct answers:\n";
-            message +="Potato is a vegetable!\n";
-            message +="Tomato is a fruit!\n";
-            message +="Avocado and Bell pepper are fruits!\n";
-            message +="Lastly, pumpkin is a fruit!\n";
+            message += "\n Correct answers:\n";
+            message += "Potato is a vegetable!\n";
+            message += "Tomato is a fruit!\n";
+            message += "Avocado and Bell pepper are fruits!\n";
+            message += "Lastly, pumpkin is a fruit!\n";
             message += "\nYou didn't reach the full score, but it is good!! ";
             message += "Because now, you are an expert on some of the fruit or vegetables that you didn't know before :).\n Thank you for doing this short quiz!";
 
@@ -167,6 +170,21 @@ public class SecondActivity extends AppCompatActivity {
     private void display(String message) {
         TextView displayScore = (TextView) findViewById(R.id.display);
         displayScore.setText(message);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current score state
+        super.onSaveInstanceState(savedInstanceState);
+        savedInstanceState.putInt("User", score);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore state members from saved instance
+        score = savedInstanceState.getInt("User");
     }
 }
 
