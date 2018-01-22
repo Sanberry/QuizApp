@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- for portrait -->
+    <dimen name="welcome_font_size">40sp</dimen>
+    <dimen name="welcome_margin_top">20dp</dimen>
+    <dimen name="welcome_margin_bottom">20dp</dimen>
+    <dimen name="image_height">250dp</dimen>
+    <dimen name="image_padding_top">20dp</dimen>
+    <dimen name="info_font_size">18sp</dimen>
+    <dimen name="info_padding_right">10dp</dimen>
+    <dimen name="info_padding_left">10dp</dimen>
+    <dimen name="info_padding_top">20dp</dimen>
+    <dimen name="info_padding_bottom">20dp</dimen>
+    <dimen name="start_margin">20dp</dimen>
+    <dimen name="start_margin_top">20dp</dimen>
+    <dimen name="start_font_size">22sp</dimen>
+    <dimen name="start_margin_bottom">20dp</dimen>
+    <dimen name="entry_font_size">18sp</dimen>
+    <dimen name="radio_margin_top">40dp</dimen>
+    <dimen name="radio_margin_bottom">15dp</dimen>
+    <dimen name="radio_margin_left">30dp</dimen>
+    <dimen name="radio_font_size">16sp</dimen>
+    <dimen name="r_group_layout_width">0dp</dimen>
+    <dimen name="r_group_layout_height">200dp</dimen>
+    <dimen name="r_group_margin_right">20dp</dimen>
+    <dimen name="question_font_size">20sp</dimen>
+    <dimen name="question_padding_left">10dp</dimen>
+    <dimen name="question_margin_left">10dp</dimen>
+    <dimen name="line_layout_height">2dp</dimen>
+    <dimen name="endLine_layout_height">20dp</dimen>
+    <dimen name="image_margin">10dp</dimen>
+    <dimen name="image_padding_right">20dp</dimen>
+
+    <!-- additional for landscape-->
+    <dimen name="welcome_l_font_size">30sp</dimen>
+    <dimen name="welcome_l_margin_top">15dp</dimen>
+    <dimen name="welcome_l_margin_bottom">15dp</dimen>
+    <dimen name="image_l_height">150dp</dimen>
+    <dimen name="image_l_padding_top">10dp</dimen>
+    <dimen name="info_l_font_size">18sp</dimen>
+    <dimen name="info_l_margin_top">15dp</dimen>
+    <dimen name="info_l_margin_bottom">15dp</dimen>
+
+</resources>
