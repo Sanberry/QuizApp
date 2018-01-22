@@ -11,11 +11,11 @@
         style="@style/MainPageImageLand"
         android:src="@drawable/fruit_or_veggie"
         android:id="@+id/main_image"
-        android:layout_below="@id/welcome"
-        />
+        android:layout_below="@id/welcome"/>
     <TextView
         android:id="@+id/info"
         style="@style/InfoLand"
+
         android:text="@string/info"
         android:layout_below="@id/main_image"/>
     <Button

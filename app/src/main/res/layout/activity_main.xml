@@ -7,7 +7,8 @@
     <TextView
         style="@style/Welcome"
         android:text="@string/welcome_to"
-        android:layout_weight="1"/>
+        android:layout_weight="1"
+        />
 
     <ImageView style="@style/MainPageImage"
         android:src="@drawable/fruit_or_veggie"
@@ -21,6 +22,7 @@
 
     <Button
         style="@style/StartButton"
+        android:textSize="@dimen/start_font_size"
         android:onClick="start"
         android:text="@string/click_to_start"
         android:layout_weight="1"/>

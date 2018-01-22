@@ -15,6 +15,8 @@ public class SecondActivity extends AppCompatActivity {
 
 
     int score = 0;
+    EditText userName;
+    EditText editText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,12 +64,15 @@ public class SecondActivity extends AppCompatActivity {
         CheckBox answerView8 = (CheckBox) findViewById(R.id.checkBoxButton4);
         answerView8.setText(answers.get(7));
 
+        userName = (EditText) findViewById(R.id.user_name);
+        editText = (EditText) findViewById(R.id.writtenAnswer);
     }
+
 
     public void onRadioButtonClicked(View view) {
         //Calling the name of the user to use within the toast message
-        EditText userName = (EditText) findViewById(R.id.user_name);
         String name = userName.getText().toString();
+
         // Is the button now checked?
         boolean checked = ((RadioButton) view).isChecked();
 
@@ -103,7 +108,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void checkBoxClicked(View view) {
-        EditText userName = (EditText) findViewById(R.id.user_name);
         String name = userName.getText().toString();
 
         CheckBox answerView5 = (CheckBox) findViewById(R.id.checkBoxButton1);
@@ -123,9 +127,7 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void submitWrittenAnswer(View view) {
-        EditText userName = (EditText) findViewById(R.id.user_name);
         String name = userName.getText().toString();
-        EditText editText = (EditText) findViewById(R.id.writtenAnswer);
         String userEntry = editText.getText().toString();
 
 
@@ -141,7 +143,6 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     public void displayScore(View view) {
-        EditText userName = (EditText) findViewById(R.id.user_name);
         String name = userName.getText().toString();
 
         String message = "\nHello, " + name + "!";

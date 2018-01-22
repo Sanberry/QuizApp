@@ -18,27 +18,29 @@
         <item name="android:layout_height">match_parent</item>
         <item name="android:orientation">vertical</item>
     </style>
+
     <style name="RelativeLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
     </style>
+
     <style name="Welcome">
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:layout_marginBottom">20dp</item>
-        <item name="android:textSize">40sp</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:gravity">center</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/textColorPrimary</item>
         <item name="android:fontFamily">serif-sans-light</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/welcome_font_size</item>
+        <item name="android:layout_marginTop">@dimen/welcome_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/welcome_margin_bottom</item>
     </style>
 
     <style name="WelcomeForLand">
-        <item name="android:layout_marginTop">15dp</item>
-        <item name="android:layout_marginBottom">5dp</item>
-        <item name="android:textSize">30sp</item>
+        <item name="android:layout_marginTop">@dimen/welcome_l_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/welcome_margin_bottom</item>
+        <item name="android:textSize">@dimen/welcome_l_font_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_height">wrap_content</item>
@@ -51,68 +53,69 @@
     <style name="MainPageImage">
         <item name="android:scaleType">centerCrop</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">250dp</item>
-        <item name="android:paddingTop">20dp</item>
+        <item name="android:layout_height">@dimen/image_height</item>
+        <item name="android:paddingTop">@dimen/image_padding_top</item>
     </style>
 
     <style name="MainPageImageLand">
         <item name="android:scaleType">centerCrop</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">150dp</item>
-        <item name="android:paddingTop">10dp</item>
+        <item name="android:layout_height">@dimen/image_l_height</item>
+        <item name="android:paddingTop">@dimen/image_padding_top</item>
     </style>
 
     <style name="Info">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/info_font_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/dark_grey</item>
-        <item name="android:paddingRight">10dp</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingRight">@dimen/info_padding_right</item>
+        <item name="android:paddingLeft">@dimen/info_padding_left</item>
+        <item name="android:paddingTop">@dimen/info_padding_top</item>
         <item name="android:textStyle">italic</item>
         <item name="android:fontFamily">serif-sans-light</item>
-        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingBottom">@dimen/info_padding_bottom</item>
     </style>
+
     <style name="InfoLand">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/info_l_font_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/dark_grey</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginTop">@dimen/info_l_margin_top</item>
         <item name="android:textStyle">italic</item>
         <item name="android:fontFamily">serif-sans-light</item>
-        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginBottom">@dimen/info_l_margin_bottom</item>
     </style>
 
     <style name="UserNameEntry">
-        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingTop">@dimen/info_padding_top</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">match_parent</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/info_font_size</item>
         <item name="android:textColor">@color/textColorPrimary</item>
         <item name="android:gravity">center_horizontal</item>
         <item name="android:inputType">text</item>
     </style>
 
     <style name="StartButton">
-        <item name="android:layout_marginTop">20dp</item>
-        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_marginTop">@dimen/start_margin_top</item>
+        <item name="android:layout_margin">@dimen/start_margin</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:textSize">22sp</item>
+        <item name="android:textSize">@dimen/start_font_size</item>
         <item name="android:textColor">@color/windowBackground</item>
         <item name="android:backgroundTint">@color/colorAccent</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:layout_marginBottom">@dimen/start_margin</item>
         <item name="android:layout_weight">1</item>
 
     </style>
 
     <style name="Entry">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/entry_font_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:gravity">center</item>
         <item name="android:layout_height">wrap_content</item>
@@ -121,41 +124,41 @@
     </style>
 
     <style name="RadioButton">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/radio_font_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/textColorPrimary</item>
-        <item name="android:layout_marginLeft">30dp</item>
-        <item name="android:layout_marginTop">40dp</item>
-        <item name="android:layout_marginBottom">15dp</item>
+        <item name="android:layout_marginLeft">@dimen/radio_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/radio_margin_top</item>
+        <item name="android:layout_marginBottom">@dimen/radio_font_size</item>
         <item name="android:text">""</item>
     </style>
 
     <style name="RadioGroup">
-        <item name="android:layout_width">0dp</item>
-        <item name="android:layout_height">200dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/r_group_layout_height</item>
         <item name="android:orientation">vertical</item>
         <item name="android:layout_weight">2</item>
-        <item name="android:layout_marginRight">20dp</item>
+        <item name="android:layout_marginRight">@dimen/r_group_margin_right</item>
     </style>
 
     <style name="QuestionNumber">
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">@dimen/question_font_size</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/textColorPrimary</item>
-        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingLeft">@dimen/question_padding_left</item>
         <item name="android:gravity">center</item>
 
     </style>
 
     <style name="Question">
-        <item name="android:textSize">18sp</item>
+        <item name="android:textSize">@dimen/entry_font_size</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/textColorPrimary</item>
-        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginLeft">@dimen/question_margin_left</item>
         <item name="android:textStyle">bold</item>
         <item name="android:gravity">center_vertical</item>
     </style>
@@ -164,24 +167,24 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:orientation">horizontal</item>
-        <item name="android:padding">10dp</item>
+        <item name="android:padding">@dimen/info_padding_left</item>
     </style>
 
     <style name="Line">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">2dp</item>
+        <item name="android:layout_height">@dimen/line_layout_height</item>
     </style>
 
     <style name="endLine">
         <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">20dp</item>
+        <item name="android:layout_height">@dimen/endLine_layout_height</item>
     </style>
 
     <style name="submit">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center_horizontal</item>
-        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_margin">@dimen/start_margin</item>
         <item name="android:textColor">@color/windowBackground</item>
     </style>
 
@@ -190,36 +193,36 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:background">@color/colorAccent</item>
         <item name="android:layout_gravity">center</item>
-        <item name="android:layout_margin">20dp</item>
+        <item name="android:layout_margin">@dimen/start_margin</item>
         <item name="android:textColor">@color/windowBackground</item>
     </style>
 
     <style name="CheckBox">
-        <item name="android:textSize">16sp</item>
+        <item name="android:textSize">@dimen/radio_font_size</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAllCaps">true</item>
         <item name="android:textColor">@color/textColorPrimary</item>
-        <item name="android:layout_marginLeft">30dp</item>
-        <item name="android:layout_marginTop">15dp</item>
+        <item name="android:layout_marginLeft">@dimen/radio_margin_left</item>
+        <item name="android:layout_marginTop">@dimen/radio_margin_bottom</item>
         <item name="android:text">""</item>
     </style>
 
     <style name="ImageView">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">3</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_margin">@dimen/image_margin</item>
+        <item name="android:paddingRight">@dimen/image_padding_right</item>
         <item name="android:scaleType">centerCrop</item>
     </style>
 
     <style name="HandDrawnImageView">
-        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">match_parent</item>
         <item name="android:layout_weight">3</item>
-        <item name="android:layout_margin">10dp</item>
-        <item name="android:paddingRight">20dp</item>
+        <item name="android:layout_margin">@dimen/image_margin</item>
+        <item name="android:paddingRight">@dimen/image_padding_right</item>
         <item name="android:scaleType">fitCenter</item>
     </style>
 </resources>
