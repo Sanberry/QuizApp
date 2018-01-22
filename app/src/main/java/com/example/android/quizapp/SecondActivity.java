@@ -17,6 +17,15 @@ public class SecondActivity extends AppCompatActivity {
     int score = 0;
     EditText userName;
     EditText editText;
+    String wrong;
+    String correct;
+    String total;
+    String hello;
+    String message1;
+    String scoreFull;
+    String scoreLess;
+    String scoreLessEnd;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,6 +75,15 @@ public class SecondActivity extends AppCompatActivity {
 
         userName = (EditText) findViewById(R.id.user_name);
         editText = (EditText) findViewById(R.id.writtenAnswer);
+        wrong = getString(R.string.wrong);
+        correct = getString(R.string.correct);
+        total = getString(R.string.total);
+        hello = getString(R.string.hello);
+        message1 = getString(R.string.message1);
+        scoreFull = getString(R.string.scoreFull);
+        scoreLess = getString(R.string.scoreLess);
+        scoreLessEnd = getString(R.string.scoreLessEnd);
+
     }
 
 
@@ -81,25 +99,25 @@ public class SecondActivity extends AppCompatActivity {
             case R.id.radioButton1:
 
                 if (checked)
-                    Toast.makeText(this, name + ", you are wrong!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, name + wrong + " " + score + " " + total, Toast.LENGTH_SHORT).show();
                 break;
 
             case R.id.radioButton2:
                 if (checked)
                     score = score + 1;
-                Toast.makeText(this, name + ", you are correct!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, name + correct + " " + score + " " + total, Toast.LENGTH_SHORT).show();
 
                 break;
             case R.id.radioButton3:
                 if (checked)
                     score = score + 1;
-                Toast.makeText(this, name + ", you are correct!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, name + correct + " " + score + " " + total, Toast.LENGTH_SHORT).show();
 
                 break;
 
             case R.id.radioButton4:
                 if (checked)
-                    Toast.makeText(this, name + ", you are wrong!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, name + wrong + " " + score + " " + total, Toast.LENGTH_SHORT).show();
                 break;
 
 
@@ -118,10 +136,10 @@ public class SecondActivity extends AppCompatActivity {
         if (answerView5.isChecked() && answerView7.isChecked()
                 && !answerView6.isChecked() && !answerView8.isChecked()) {
             score = score + 1;
-            Toast.makeText(this, name + ", you are correct!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, name + correct + " " + score + " " + total, Toast.LENGTH_SHORT).show();
 
         } else {
-            Toast.makeText(this, name + ", you are wrong!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, name + correct + " " + score + " " + total, Toast.LENGTH_SHORT).show();
 
         }
     }
@@ -133,10 +151,10 @@ public class SecondActivity extends AppCompatActivity {
 
         if (userEntry.matches("pumpkin")) {
             score = score + 1;
-            Toast.makeText(this, name + ", you are correct!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, name + correct + " " + score +  " " + total, Toast.LENGTH_SHORT).show();
         } else {
 
-            Toast.makeText(this, name + ", you are wrong!" + "Your overall score is " + score + " out of 4", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, name + correct + " " + score +  " " + total, Toast.LENGTH_SHORT).show();
 
         }
 
@@ -145,23 +163,15 @@ public class SecondActivity extends AppCompatActivity {
     public void displayScore(View view) {
         String name = userName.getText().toString();
 
-        String message = "\nHello, " + name + "!";
-        message += "\nYour overall score is " + score;
+        String message = hello + " " + name + "!";
+        message += message1 + " " + score;
 
         if (score == 6) {
-            message += "\nYou are amazing! You really know what is fruit or vegetable!\nThank you for doing this short quiz and proving your skills";
-
+            message += scoreFull;
             display(message);
 
         } else {
-            message += "\n Correct answers:\n";
-            message += "Potato is a vegetable!\n";
-            message += "Tomato is a fruit!\n";
-            message += "Avocado and Bell pepper are fruits!\n";
-            message += "Lastly, pumpkin is a fruit!\n";
-            message += "\nYou didn't reach the full score, but it is good!! ";
-            message += "Because now, you are an expert on some of the fruit or vegetables that you didn't know before :).\n Thank you for doing this short quiz!";
-
+            message += scoreLess + scoreLessEnd;
             display(message);
         }
     }

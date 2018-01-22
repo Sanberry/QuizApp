@@ -11,4 +11,12 @@
     <string name="question4">Write down the one that is not a vegetable; pumpkin, turnip, bean?</string>
     <string name="submit">Submit</string>
     <string name="score">Click and Scroll to View Your Overall Score</string>
+    <string name="wrong">, you are wrong! Your overall score is </string>
+    <string name="correct">, you are correct! Your overall score is </string>
+    <string name="total"> out of 4.</string>
+    <string name="hello">Hello, </string>
+    <string name="message1">\nYour overall score is </string>
+    <string name="scoreFull">\nYou are amazing! You really know what is fruit or vegetable! \nThank you for doing this short quiz and proving your skills"</string>
+    <string name="scoreLess">\n Correct answers:\n Potato is a vegetable!\n Tomato is a fruit!\n Avocado and Bell pepper are fruits!\n Lastly, pumpkin is a fruit!\nYou didn\'t reach the full score, but it is good!!</string>
+    <string name="scoreLessEnd">\nBecause now, you are an expert on some of the fruit or vegetables that you didn\'t know before :).\nThank you for doing this short quiz!</string>
 </resources>
